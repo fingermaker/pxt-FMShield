@@ -177,7 +177,7 @@ namespace FMShield {
     //% blockId=sensor_ev3ColorSensor block="Ev3 color|%m|mode|%mode"
     //% shim=FMShield::ev3UartSensor
 
-    export function ev3ColorSensor(m: Ev3Sensor, mode: Ev3ColorSensorMode): number {
+    export function sensor_ev3ColorSensor(m: Ev3Sensor, mode: Ev3ColorSensorMode): number {
         return;
     }
 
@@ -192,7 +192,7 @@ namespace FMShield {
     //% blockId=sensor_ev3GyroSensor block="Ev3 gyro|%m|mode|%mode"
     //% shim=FMShield::ev3UartSensor
 
-    export function ev3GyroSensor(m: Ev3Sensor, mode: Ev3GyroSensorMode): number {
+    export function sensor_ev3GyroSensor(m: Ev3Sensor, mode: Ev3GyroSensorMode): number {
         return;
     }
 
@@ -206,7 +206,7 @@ namespace FMShield {
     //% blockGap=8
     //% blockId=motor_setMotor block="Set motor|%m|type|%t|Power|%p"
     //% shim=FMShield::setMotor
-    export function setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
+    export function motor_setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
         // Add code here
         return;
     }
@@ -223,7 +223,7 @@ namespace FMShield {
     //% blockGap=8
     //% blockId=motor_setMotorInversion block="Set motor inversion|%m"
     //% shim=FMShield::setMotorInversion
-    export function setMotorInversion(m: FMMotorSN): void {
+    export function motor_setMotorInversion(m: FMMotorSN): void {
         return;
     }
 
@@ -238,7 +238,7 @@ namespace FMShield {
     //% blockId=motor_motorRun block="Motor run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRun
-    export function motorRun(m: FMMotorSN, speed: number): void {
+    export function motor_motorRun(m: FMMotorSN, speed: number): void {
         // Add code here
         return;
     }
@@ -254,7 +254,7 @@ namespace FMShield {
     //% blockId=motor_motorFineRun block="Motor fine run|%m|speed|%speed"
     //% speed.min=-2000 speed.max=2000
     //% shim=FMShield::motorFineRun
-    export function motorFineRun(m: FMMotorSN, speed: number): void {
+    export function motor_motorFineRun(m: FMMotorSN, speed: number): void {
         // Add code here
         return;
     }
@@ -270,7 +270,7 @@ namespace FMShield {
     //% blockId=motor_motorConstantRun block="Motor Constant run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorConstantRun
-    export function motorConstantRun(m: FMMotorSN, speed: number): void {
+    export function motor_motorConstantRun(m: FMMotorSN, speed: number): void {
         return;
     }
     /**
@@ -284,7 +284,7 @@ namespace FMShield {
     //% blockId=motor_motorRunPosition block="Motor run|%m|speed|%speed|position|%position"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRunPosition
-    export function motorRunPosition(m: FMMotorSN, speed: number, position: number): void {
+    export function motor_motorRunPosition(m: FMMotorSN, speed: number, position: number): void {
         return;
     }
     /**
@@ -297,7 +297,7 @@ namespace FMShield {
     //% blockGap=8
     //% blockId=motor_motorReadPosition block="Motor read position|%m"
     //% shim=FMShield::motorReadPosition
-    export function motorReadPosition(m: FMMotorSN): number {
+    export function motor_motorReadPosition(m: FMMotorSN): number {
        
         return ;
     }
