@@ -108,6 +108,6 @@ namespace FMShield
             break;
         }
         
-        return intMm;
+        return 4095-intMm;
     }
 } // namespace FMShield
