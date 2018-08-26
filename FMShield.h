@@ -85,13 +85,13 @@ union r{
 
 extern r revInf;
 extern s sendCmd;
-class custom
-{
-    public:
+//class custom
+//{
+    //public:
     void sendCmdRevInf(uint8_t size);
-    int ev3UltrasonicSensor(uint8_t s,uint8_t mode);
+    int legoLightSensor(uint8_t s);
     int ev3UartSensor(uint8_t s,uint8_t mode);
-};
+//};
 #endif // #ifndef FMSHIELD_H
 
 
