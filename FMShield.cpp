@@ -89,22 +89,22 @@ namespace FMShield
         switch (s)
         {
         case 0:
-            intMm = revInf.inf.s1.s1_ANA;
+            intMm = revInf.inf.adc.s1_ANA;
             break;
         case 1:
-            intMm = revInf.inf.s2.s1_ANA;
+            intMm = revInf.inf.adc.s2_ANA;
             break;
         case 2:
-            intMm = revInf.inf.s3.s1_ANA;
+            intMm = revInf.inf.adc.s3_ANA;
             break;
         case 3:
-            intMm = revInf.inf.s4.s1_ANA;
+            intMm = revInf.inf.adc.s4_ANA;
             break;
         case 4:
-            intMm = revInf.inf.s5.s1_ANA;
+            intMm = revInf.inf.adc.s5_ANA;
             break;
         case 5:
-            intMm = revInf.inf.s6.s1_ANA;
+            intMm = revInf.inf.adc.s6_ANA;
             break;
         }
         
