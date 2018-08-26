@@ -40,41 +40,7 @@ namespace FMShield
     }
 
    
-    //% 
-    int ev3UltrasonicSensor(uint8_t s, uint8_t mode)
-    {
-        // Add code here
-        //uint8_t startN = 4; //8byte
-        float mm;
-        int intMm;
-        sendCmd.cSend[0 + s * 4] = 1;
-        sendCmd.cSend[2 + s * 4] = mode;
-        sendCmdRevInf(128);
-        switch (s)
-        {
-        case 0:
-            mm = revInf.inf.s1.Actual;
-            break;
-        case 1:
-            mm = revInf.inf.s2.Actual;
-            break;
-        case 2:
-            mm = revInf.inf.s3.Actual;
-            break;
-        case 3:
-            mm = revInf.inf.s4.Actual;
-            break;
-        case 4:
-            mm = revInf.inf.s5.Actual;
-            break;
-        case 5:
-            mm = revInf.inf.s6.Actual;
-            break;
-        }
-        intMm = int(mm);
-        return intMm;
-        
-    }
+    
 
     //%
     int ev3UartSensor(uint8_t s, uint8_t mode)
@@ -109,5 +75,39 @@ namespace FMShield
         }
         intMm = int(mm);
         return int(mm);
+    }
+    //%
+    int legoLightSensor(uint8_t s)
+    {
+        // Add code here
+        //uint8_t startN = 4; //8byte
+        
+        int intMm;
+        //sendCmd.cSend[0 + s * 4] = 1;
+        //sendCmd.cSend[2 + s * 4] = mode;
+        sendCmdRevInf(128);
+        switch (s)
+        {
+        case 0:
+            intMm = revInf.inf.s1.s1_ANA;
+            break;
+        case 1:
+            intMm = revInf.inf.s2.s1_ANA;
+            break;
+        case 2:
+            intMm = revInf.inf.s3.s1_ANA;
+            break;
+        case 3:
+            intMm = revInf.inf.s4.s1_ANA;
+            break;
+        case 4:
+            intMm = revInf.inf.s5.s1_ANA;
+            break;
+        case 5:
+            intMm = revInf.inf.s6.s1_ANA;
+            break;
+        }
+        
+        return intMm;
     }
 } // namespace FMShield

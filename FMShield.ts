@@ -16,7 +16,7 @@ enum Ev3Sensor {
     S6 = 5
 }
 
-enum FMSensor {
+enum LegoSensor {
     //% block=S1
     S1 = 0,
     //% block=S2
@@ -40,7 +40,14 @@ enum Ev3UltrasonicSensorMode {
     Listen = 2
 }
 
-
+enum LegoLightSensorMode {
+    //% block=
+    Centimeters = 0,
+    //% block=Inches
+    Inches = 1,
+    //% block=
+    Listen = 2
+}
 
 enum Ev3ColorSensorMode {
     //% block=COL_REFLECT
@@ -56,6 +63,32 @@ enum Ev3ColorSensorMode {
     //% block=COL_CAL
     COL_CAL = 5
 }
+
+enum Ev3GyroSensorMode {
+    //% block=Angle
+    Angle = 0,
+    //% block=Inches
+    Rate = 1,
+    //% block=Fast
+    Fast = 2
+}
+
+enum FMSensor {
+    //% block=S1
+    S1 = 0,
+    //% block=S2
+    S2 = 1,
+    //% block=S3
+    S3 = 2,
+    //% block=S4
+    S4 = 3,
+    //% block=S5
+    S5 = 4,
+    //% block=S6
+    S6 = 5
+}
+
+
 
 enum FMMotorType {
     //% block=FM25
@@ -135,11 +168,11 @@ namespace FMShield {
         * @param p 在此处描述参数
         */
     //% weight=16
-    //% blockId=sensor_c_ev3UltrasonicSensor block="Ev3 c Ultrasonic|%s|mode|%mode"
-    //% shim=FMShield::ev3UartSensor
+    //% blockId=sensor_legoLightSensor block="lego light|%s"
+    //% shim=FMShield::legoLightSensor
 
 
-    export function sensor_c_ev3UartSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
+    export function sensor_legoLightSensor(s: LegoSensor): number {
         return;
     }
 
@@ -155,7 +188,7 @@ namespace FMShield {
     //% shim=FMShield::ev3UartSensor
 
 
-    export function sensor_ev3UartSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
+    export function sensor_ev3UltrasonicSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
         return;
     }
     /**
@@ -166,19 +199,26 @@ namespace FMShield {
     */
     //% weight=14
     //% blockId=sensor_ev3ColorSensor block="Ev3 color|%m|mode|%mode"
-
+    //% shim=FMShield::ev3UartSensor
 
     export function ev3ColorSensor(m: Ev3Sensor, mode: Ev3ColorSensorMode): number {
-        // Add code here
-        let startN: number = 76; //8byte
-        let mm: number;
-        cmdSend();
-        mm = rcv[startN + m * 12]
-            + rcv[startN + 1 + m * 12] * 256
-            + rcv[startN + 2 + m * 12] * 256 * 256
-            + rcv[startN + 3 + m * 12] * 256 * 256 * 256;
-        return mm;
+        return;
     }
+
+    /**
+    * TODO: 在此处描述您的函数
+    * @param m 在此处描述参数,
+    * @param t 在此处描述参数, 
+    * @param p 在此处描述参数
+    */
+    //% weight=13
+    //% blockId=sensor_ev3GyroSensor block="Ev3 gyro|%m|mode|%mode"
+    //% shim=FMShield::ev3UartSensor
+
+    export function ev3GyroSensor(m: Ev3Sensor, mode: Ev3GyroSensorMode): number {
+        return;
+    }
+
     /**
      * TODO: 在此处描述您的函数
      * @param m 在此处描述参数,
