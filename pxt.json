@@ -1,0 +1,23 @@
+{
+    "name": "FMShield",
+    "version": "0.0.0",
+    "description": "New Finger Maker",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "FMShield.h",
+        "FMShield.cpp",
+        "FMShield.ts",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": false
+}
