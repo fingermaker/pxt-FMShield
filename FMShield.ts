@@ -243,6 +243,7 @@ namespace FMShield {
      * @param p 在此处描述参数
      */
     //% weight=29
+    //% blockGap=8
     //% blockId=motor_motorFineRun block="Motor fine run|%m|speed|%speed"
     //% speed.min=-2000 speed.max=2000
     //% shim=FMShield::motorFineRun
@@ -257,6 +258,7 @@ namespace FMShield {
      * @param p 在此处描述参数
      */
     //% weight=28
+    //% blockGap=8
     //% blockId=motor_motorConstantRun block="Motor Constant run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorConstantRun

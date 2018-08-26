@@ -22,10 +22,6 @@ namespace FMShield
         fmShield_spi.frequency(1000000);
         NSS = 0;
 
-        /*for (i = 0; i < size; i++)
-        {
-        sendCmd.cSend[i]=i;
-        }*/
         for (i = 0; i < size; i++)
         {
             revInf.cInf[i] = fmShield_SPI_Write_Byte(sendCmd.cSend[i]);
@@ -65,7 +61,7 @@ namespace FMShield
             mm = revInf.inf.s6.Actual;
             break;
         }
-        //intMm = int(mm);
+        
         return int(mm);
     }
     //%
