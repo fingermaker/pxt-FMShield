@@ -224,7 +224,7 @@ namespace FMShield {
     //% blockId=motor_setMotorInversion block="Set motor inversion|%m"
     //% shim=FMShield::setMotorInversion
     export function setMotorInversion(m: FMMotorSN): void {
-        
+        return;
     }
 
     /**
