@@ -256,6 +256,7 @@ namespace FMShield {
     //% shim=FMShield::motorFineRun
     export function motorFineRun(m: FMMotorSN, speed: number): void {
         // Add code here
+        return;
     }
 
     /**
@@ -284,7 +285,7 @@ namespace FMShield {
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRunPosition
     export function motorRunPosition(m: FMMotorSN, speed: number, position: number): void {
-
+        return;
     }
     /**
      * TODO: 在此处描述您的函数
