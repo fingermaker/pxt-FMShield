@@ -141,6 +141,7 @@ namespace FMShield {
         * @param p 在此处描述参数
         */
     //% weight=16
+    //% blockGap=8
     //% blockId=sensor_nxtLightSensor block="nxt light|%s"
     //% shim=FMShield::nxtLightSensor
 
@@ -157,6 +158,7 @@ namespace FMShield {
         * @param p 在此处描述参数
         */
     //% weight=15
+    //% blockGap=8
     //% blockId=sensor_ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
     //% shim=FMShield::ev3UartSensor
 
@@ -171,6 +173,7 @@ namespace FMShield {
     * @param p 在此处描述参数
     */
     //% weight=14
+    //% blockGap=8
     //% blockId=sensor_ev3ColorSensor block="Ev3 color|%m|mode|%mode"
     //% shim=FMShield::ev3UartSensor
 
@@ -185,6 +188,7 @@ namespace FMShield {
     * @param p 在此处描述参数
     */
     //% weight=13
+    //% blockGap=8
     //% blockId=sensor_ev3GyroSensor block="Ev3 gyro|%m|mode|%mode"
     //% shim=FMShield::ev3UartSensor
 
@@ -199,6 +203,7 @@ namespace FMShield {
      * @param p 在此处描述参数
      */
     //% weight=50
+    //% blockGap=8
     //% blockId=motor_setMotor block="Set motor|%m|type|%t|Power|%p"
     //% shim=FMShield::setMotor
     export function setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
@@ -215,6 +220,7 @@ namespace FMShield {
      * @param p 在此处描述参数
      */
     //% weight=48
+    //% blockGap=8
     //% blockId=motor_setMotorInversion block="Set motor inversion|%m"
     //% shim=FMShield::setMotorInversion
     export function setMotorInversion(m: FMMotorSN): void {
@@ -228,6 +234,7 @@ namespace FMShield {
          * @param p 在此处描述参数
          */
     //% weight=30
+    //% blockGap=8
     //% blockId=motor_motorRun block="Motor run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRun
@@ -272,6 +279,7 @@ namespace FMShield {
      * @param p 在此处描述参数
      */
     //% weight=27
+    //% blockGap=8
     //% blockId=motor_motorRunPosition block="Motor run|%m|speed|%speed|position|%position"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRunPosition
@@ -285,6 +293,7 @@ namespace FMShield {
      * @param p 在此处描述参数
      */
     //% weight=25
+    //% blockGap=8
     //% blockId=motor_motorReadPosition block="Motor read position|%m"
     //% shim=FMShield::motorReadPosition
     export function motorReadPosition(m: FMMotorSN): number {
