@@ -1,7 +1,3 @@
-//#include "pxt.h"
-//using namespace pxt;
-
-
 #include "pxt.h"
 #include "MicroBitPin.h"
 #include "mbed.h"
@@ -112,6 +108,6 @@ namespace FMShield
             break;
         }
         intMm = int(mm);
-        return intMm;
+        return int(mm);
     }
 } // namespace FMShield
