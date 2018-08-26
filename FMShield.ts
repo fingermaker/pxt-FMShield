@@ -156,20 +156,7 @@ namespace FMShield {
 
 
     export function sensor_ev3UartSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
-        // Add code here
-        let startN: number = 4; //8byte
-        let mm: number;
-        cmd[0 + s * 4] = 1;
-        //cmd[1 + s * 4] = 30;
-        cmd[2 + s * 4] = mode;
-        cmdSend();
-        
-        mm = rcv[startN + s * 8]
-            + rcv[startN + 1 + s * 8] * 256
-            + rcv[startN + 2 + s * 8] * 256 * 256
-            + rcv[startN + 3 + s * 8] * 256 * 256 * 256;
-        return mm;
-        //return;
+        return;
     }
     /**
     * TODO: 在此处描述您的函数
