@@ -230,7 +230,7 @@ namespace FMShield {
     //% shim=FMShield::setMotor
     export function setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
         // Add code here
-       
+        return;
     }
 
     
@@ -260,6 +260,7 @@ namespace FMShield {
     //% shim=FMShield::motorRun
     export function motorRun(m: FMMotorSN, speed: number): void {
         // Add code here
+        return;
     }
 
     /**
@@ -287,7 +288,7 @@ namespace FMShield {
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorConstantRun
     export function motorConstantRun(m: FMMotorSN, speed: number): void {
-        
+        return;
     }
     /**
      * TODO: 在此处描述您的函数
