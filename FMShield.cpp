@@ -43,7 +43,14 @@ namespace FMShield
         NSS = 1;
     }
 
-    //%
+    /**
+        * TODO: 在此处描述您的函数
+        * @param m 在此处描述参数,
+        * @param t 在此处描述参数, 
+        * @param p 在此处描述参数
+        */
+    //% weight=16
+    //% blockId=sensor_c_ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
     int ev3UltrasonicSensor(uint8_t s, uint8_t mode)
     {
         // Add code here

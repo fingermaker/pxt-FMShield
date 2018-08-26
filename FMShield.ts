@@ -123,6 +123,11 @@ namespace FMShield {
         pins.digitalWritePin(DigitalPin.P16, 1);
     }
     
+    //% shim=FMShield::sendCmdRevInf
+    export function sendCmdRevInf(size:number):void{
+        return;
+    }
+
     
     /**
         * TODO: 在此处描述您的函数
@@ -131,10 +136,10 @@ namespace FMShield {
         * @param p 在此处描述参数
         */
     //% weight=15
-    //% blockId=motor_ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
+    //% blockId=ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
     
 
-    export function ev3UartSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
+    export function sensor_ev3UartSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
         // Add code here
         let startN: number = 4; //8byte
         let mm: number;
@@ -157,7 +162,7 @@ namespace FMShield {
     * @param p 在此处描述参数
     */
     //% weight=14
-    //% blockId=motor_ev3ColorSensor block="Ev3 color|%m|mode|%mode"
+    //% blockId=sensor_ev3ColorSensor block="Ev3 color|%m|mode|%mode"
 
 
     export function ev3ColorSensor(m: Ev3Sensor, mode: Ev3ColorSensorMode): number {
