@@ -132,35 +132,8 @@ enum FMMotorMode {
  */
 //% weight=2 color=#0050BB icon="\uf1b9"
 namespace FMShield {
-    let cmd: number[] = [];
-    let rcv: number[] = [];
-
-    /**
-     * Help goes here.
-     */
-    //% shim=FMShield::extfun
-    export function extfun(x: number, y: number) {
-        // Dummy implementation for the simulator.
-        return x - y
-    }
-
-    export function cmdSend(): void {
-        // Add code here
-        let i: number = 0;
-        pins.spiFormat(8, 0);
-        pins.digitalWritePin(DigitalPin.P16, 0);
-        for (i = 0; i < 128; i++) {
-            rcv[i] = pins.spiWrite(cmd[i]);
-        }
-        //sendCmdRevInf(16);
-        pins.digitalWritePin(DigitalPin.P16, 1);
-    }
     
-    //% shim=FMShield::sendCmdRevInf
-    export function sendCmdRevInf(size:number):void{
-        return;
-    }
-
+    
     /**
         * TODO: 在此处描述您的函数
         * @param m 在此处描述参数,

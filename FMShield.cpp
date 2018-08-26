@@ -14,12 +14,6 @@ DigitalOut NSS(MICROBIT_PIN_P16);
 namespace FMShield
 {
     //%
-    int extfun(int x, int y)
-    {
-        return x + y;
-    }
-
-    //%
     void sendCmdRevInf(uint8_t size)
     {
         uint8_t i;
@@ -40,8 +34,6 @@ namespace FMShield
     }
 
    
-    
-
     //%
     int ev3UartSensor(uint8_t s, uint8_t mode)
     {
