@@ -2,6 +2,13 @@
 #ifndef _FMSHIELD_H
 #define _FMSHIELD_H
 
+ 
+#define MOTOR_COAST     0    
+#define MOTOR_BRAKE     1    
+#define MOTOR_FIXED_DRIVE   2
+#define MOTOR_PID_POSITION  3
+#define MOTOR_PID_SPEED     4
+
 typedef   struct{
   uint8_t portActivate;
     uint8_t sensorType;
@@ -89,9 +96,17 @@ extern s sendCmd;
 //{
     //public:
     void sendCmdRevInf(uint8_t size);
-    int legoLightSensor(uint8_t s);
+    int nxtLightSensor(uint8_t s);
     int ev3UartSensor(uint8_t s,uint8_t mode);
-//};
+    void setMotor(uint8_t m, uint8_t t, uint8_t p);
+    void setMotorMode(uint8_t m, uint8_t mode);
+    void setMotorInversion(uint8_t m);
+    void motorRun(uint8_t m, int speed);
+    void motorFineRun(uint8_t m, int speed);
+    void motorConstantRun(uint8_t m, int speed);
+    void motorRunPosition(uint8_t m, int speed, long position);
+    long motorReadPosition(uint8_t m);
+    //};
 #endif // #ifndef FMSHIELD_H
 
 

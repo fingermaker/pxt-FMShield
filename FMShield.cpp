@@ -48,7 +48,7 @@ namespace FMShield
         // Add code here
         //uint8_t startN = 4; //8byte
         float mm;
-        int intMm;
+        //int intMm;
         sendCmd.cSend[0 + s * 4] = 1;
         sendCmd.cSend[2 + s * 4] = mode;
         sendCmdRevInf(128);
@@ -73,11 +73,11 @@ namespace FMShield
             mm = revInf.inf.s6.Actual;
             break;
         }
-        intMm = int(mm);
+        //intMm = int(mm);
         return int(mm);
     }
     //%
-    int legoLightSensor(uint8_t s)
+    int nxtLightSensor(uint8_t s)
     {
         // Add code here
         //uint8_t startN = 4; //8byte
@@ -108,6 +108,121 @@ namespace FMShield
             break;
         }
         
-        return 4095-intMm;
+        return intMm;
     }
+    //%
+    void setMotor(uint8_t m, uint8_t t, uint8_t p) {
+        // Add code here
+        uint8_t startN = 24; // let startN : number = 24; //8byte
+        uint8_t mm;      //let mm: number;
+
+        uint8_t _mode = sendCmd.cSend[startN + m * 16]; //let _mode: number = cmd[sendCmd];
+        mm = _mode & 0x3f;
+
+        sendCmd.cSend[startN + m * 16] = mm + t * 128 + p * 64;
+        //sendCmd.cSend[startN + m * 16] = 2;
+    }
+    //%
+    void setMotorMode(uint8_t m, uint8_t mode) {
+        // Add code here
+        uint8_t startN = 24;//let startN: number = 24; //8byte
+        uint8_t mm;//    let mm : number;
+        mm = sendCmd.cSend[startN + m * 16] & 0xc0;
+        sendCmd.cSend[startN + m * 16] = mode | mm;
+    }
+    //%
+    void setMotorInversion(uint8_t m){
+        // Add code here
+        uint8_t startN = 25; //let startN : number = 25; //8byte        
+        sendCmd.cSend[startN + m * 16] = 1;
+    }
+    //%
+    void motorRun(uint8_t m, int speed) {
+        // Add code here
+        uint8_t startN = 28; //let startN: number = 28; //8byte
+
+        setMotorMode(m, MOTOR_FIXED_DRIVE);
+        speed = speed * 20;
+        if (speed > 2000) {
+            speed = 2000;
+        }
+        if (speed < -2000) {
+            speed = -2000;
+        }
+        sendCmd.cSend[startN + m * 16] = speed % 255;
+        sendCmd.cSend[startN + 1 + m * 16] = speed >> 8;
+        sendCmdRevInf(128);
+    }
+    //%
+    void motorFineRun(uint8_t m, int speed) {
+        // Add code here
+        uint8_t startN = 28; //let startN: number = 28; //8byte
+
+        setMotorMode(m, MOTOR_FIXED_DRIVE);
+        if (speed > 2000) {
+            speed = 2000;
+        }
+        if (speed < -2000) {
+            speed = -2000;
+        }
+        sendCmd.cSend[startN + m * 16] = speed % 255;
+        sendCmd.cSend[startN + 1 + m * 16] = speed >> 8;
+        sendCmdRevInf(128);
+
+    }
+    //%
+    void motorConstantRun(uint8_t m, int speed) {
+        // Add code here
+        uint8_t startN = 28;//let startN: number = 28; //8byte
+        
+        setMotorMode(m, MOTOR_PID_SPEED);
+        if (speed > 100) {
+            speed = 100;
+        }
+        if (speed < -100) {
+            speed = -100;
+        }
+        sendCmd.cSend[startN + m * 16] = speed % 255;
+        sendCmd.cSend[startN + 1 + m * 16] = speed >> 8;
+        sendCmdRevInf(128);
+
+    }
+
+    //%
+    long motorReadPosition(uint8_t m){
+        // Add code here
+        uint8_t startN = 76; //let startN: number = 76; //8byte
+        long mm; //let mm: number;
+        sendCmdRevInf(128);
+        mm = revInf.cInf[startN + m * 12]
+            + revInf.cInf[startN + 1 + m * 12] * 256
+            + revInf.cInf[startN + 2 + m * 12] * 256 * 256
+            + revInf.cInf[startN + 3 + m * 12] * 256 * 256 * 256;
+        return mm;
+    }
+    //%
+    void motorRunPosition(uint8_t m, int speed, long position) {
+        // Add code here
+        uint8_t startN = 28; //let startN: number = 28; //8byte
+      
+        long p = motorReadPosition(m);//let p: number = motorReadPosition(m);
+        setMotorMode(m, MOTOR_PID_POSITION);
+        if (speed > 100) {
+            speed = 100;
+        }
+        if (speed < -100) {
+            speed = -100;
+        }
+        sendCmd.cSend[startN + m * 16] = speed % 255;
+        sendCmd.cSend[startN + 1 + m * 16] = speed >> 8;
+        position = position + p;
+        sendCmd.cSend[startN + 4 + m * 16] = position % 255;
+        sendCmd.cSend[startN + 4 + 1 + m * 16] = (position >> 8) % 255;
+        sendCmd.cSend[startN + 4 + 2 + m * 16] = (position >> 16) % 255;
+        sendCmd.cSend[startN + 4 + 3 + m * 16] = (position >> 24) % 255;
+
+        sendCmdRevInf(128);
+
+    }
+    
 } // namespace FMShield

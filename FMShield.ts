@@ -16,7 +16,7 @@ enum Ev3Sensor {
     S6 = 5
 }
 
-enum LegoSensor {
+enum NxtSensor {
     //% block=S1
     S1 = 0,
     //% block=S2
@@ -40,7 +40,7 @@ enum Ev3UltrasonicSensorMode {
     Listen = 2
 }
 
-enum LegoLightSensorMode {
+enum NxtLightSensorMode {
     //% block=
     Centimeters = 0,
     //% block=Inches
@@ -168,11 +168,11 @@ namespace FMShield {
         * @param p 在此处描述参数
         */
     //% weight=16
-    //% blockId=sensor_legoLightSensor block="lego light|%s"
-    //% shim=FMShield::legoLightSensor
+    //% blockId=sensor_nxtLightSensor block="nxt light|%s"
+    //% shim=FMShield::nxtLightSensor
 
 
-    export function sensor_legoLightSensor(s: LegoSensor): number {
+    export function sensor_nxtLightSensor(s: NxtSensor): number {
         return;
     }
 
@@ -227,25 +227,13 @@ namespace FMShield {
      */
     //% weight=50
     //% blockId=motor_setMotor block="Set motor|%m|type|%t|Power|%p"
-    export function setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
+    //% shim=FMShield::setMotor
+    function setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
         // Add code here
-        let startN: number = 24; //8byte
-        let mm: number;
-
-        let _mode: number = cmd[startN + m * 16];
-        mm = _mode & 0x3f;
-
-        cmd[startN + m * 16] = mm + t * 128 + p * 64;
-        cmd[startN + m * 16] = 2;
+       
     }
 
-    export function setMotorMode(m: FMMotorSN, mode: FMMotorMode): void {
-        // Add code here
-        let startN: number = 24; //8byte
-        let mm: number;
-        mm = cmd[startN + m * 16] & 0xc0;
-        cmd[startN + m * 16] = mode | mm;
-    }
+    
 
     /**
      * TODO: 在此处描述您的函数
@@ -255,10 +243,9 @@ namespace FMShield {
      */
     //% weight=48
     //% blockId=motor_setMotorInversion block="Set motor inversion|%m"
-    export function setMotorInversion(m: FMMotorSN): void {
-        // Add code here
-        let startN: number = 25; //8byte
-        cmd[startN + m * 16] = 1;
+    //% shim=FMShield::setMotorInversion
+    function setMotorInversion(m: FMMotorSN): void {
+        
     }
 
     /**
@@ -270,23 +257,9 @@ namespace FMShield {
     //% weight=30
     //% blockId=motor_motorRun block="Motor run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
-
-    export function motorRun(m: FMMotorSN, speed: number): void {
+    //% shim=FMShield::motorRun
+    function motorRun(m: FMMotorSN, speed: number): void {
         // Add code here
-        let startN: number = 28; //8byte
-        let mm: number;
-        setMotorMode(m, FMMotorMode.FIXED_DRIVE);
-        speed = speed * 20;
-        if (speed > 2000) {
-            speed = 2000;
-        }
-        if (speed < -2000) {
-            speed = -2000;
-        }
-        cmd[startN + m * 16] = speed % 255;
-        cmd[startN + 1 + m * 16] = speed >> 8;
-        cmdSend();
-
     }
 
     /**
@@ -298,22 +271,9 @@ namespace FMShield {
     //% weight=29
     //% blockId=motor_motorFineRun block="Motor fine run|%m|speed|%speed"
     //% speed.min=-2000 speed.max=2000
-
-    export function motorFineRun(m: FMMotorSN, speed: number): void {
+    //% shim=FMShield::motorFineRun
+    function motorFineRun(m: FMMotorSN, speed: number): void {
         // Add code here
-        let startN: number = 28; //8byte
-        let mm: number;
-        setMotorMode(m, FMMotorMode.FIXED_DRIVE);
-        if (speed > 2000) {
-            speed = 2000;
-        }
-        if (speed < -2000) {
-            speed = -2000;
-        }
-        cmd[startN + m * 16] = speed % 255;
-        cmd[startN + 1 + m * 16] = speed >> 8;
-        cmdSend();
-
     }
 
     /**
@@ -325,22 +285,9 @@ namespace FMShield {
     //% weight=28
     //% blockId=motor_motorConstantRun block="Motor Constant run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
-
+    //% shim=FMShield::motorConstantRun
     export function motorConstantRun(m: FMMotorSN, speed: number): void {
-        // Add code here
-        let startN: number = 28; //8byte
-        let mm: number;
-        setMotorMode(m, FMMotorMode.PID_SPEED);
-        if (speed > 100) {
-            speed = 100;
-        }
-        if (speed < -100) {
-            speed = -100;
-        }
-        cmd[startN + m * 16] = speed % 255;
-        cmd[startN + 1 + m * 16] = speed >> 8;
-        cmdSend();
-
+        
     }
     /**
      * TODO: 在此处描述您的函数
@@ -351,28 +298,8 @@ namespace FMShield {
     //% weight=27
     //% blockId=motor_motorRunPosition block="Motor run|%m|speed|%speed|position|%position"
     //% speed.min=-100 speed.max=100
-
+    //% shim=FMShield::motorRunPosition
     export function motorRunPosition(m: FMMotorSN, speed: number, position: number): void {
-        // Add code here
-        let startN: number = 28; //8byte
-        let mm: number;
-        let p: number = motorReadPosition(m);
-        setMotorMode(m, FMMotorMode.PID_POSITION);
-        if (speed > 100) {
-            speed = 100;
-        }
-        if (speed < -100) {
-            speed = -100;
-        }
-        cmd[startN + m * 16] = speed % 255;
-        cmd[startN + 1 + m * 16] = speed >> 8;
-        position = position + p;
-        cmd[startN + 4 + m * 16] = position % 255;
-        cmd[startN + 4 + 1 + m * 16] = (position >> 8) % 255;
-        cmd[startN + 4 + 2 + m * 16] = (position >> 16) % 255;
-        cmd[startN + 4 + 3 + m * 16] = (position >> 24) % 255;
-
-        cmdSend();
 
     }
     /**
@@ -383,18 +310,10 @@ namespace FMShield {
      */
     //% weight=25
     //% blockId=motor_motorReadPosition block="Motor read position|%m"
-
-
+    //% shim=FMShield::motorReadPosition
     export function motorReadPosition(m: FMMotorSN): number {
-        // Add code here
-        let startN: number = 76; //8byte
-        let mm: number;
-        cmdSend();
-        mm = rcv[startN + m * 12]
-            + rcv[startN + 1 + m * 12] * 256
-            + rcv[startN + 2 + m * 12] * 256 * 256
-            + rcv[startN + 3 + m * 12] * 256 * 256 * 256;
-        return mm;
+       
+        return ;
     }
 }
 
