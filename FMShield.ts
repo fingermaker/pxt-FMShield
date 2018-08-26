@@ -136,12 +136,13 @@ namespace FMShield {
         * @param p 在此处描述参数
         */
     //% weight=15
-    //% blockId=ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
-    
+    //% blockId=sensor_ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
+    //% shim=FMShield::ev3UartSensor
+
 
     export function sensor_ev3UartSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
         // Add code here
-        let startN: number = 4; //8byte
+        /*let startN: number = 4; //8byte
         let mm: number;
         cmd[0 + s * 4] = 1;
         //cmd[1 + s * 4] = 30;
@@ -152,8 +153,8 @@ namespace FMShield {
             + rcv[startN + 1 + s * 8] * 256
             + rcv[startN + 2 + s * 8] * 256 * 256
             + rcv[startN + 3 + s * 8] * 256 * 256 * 256;
-        return mm;
-        //return;
+        return mm;*/
+        return;
     }
     /**
     * TODO: 在此处描述您的函数
