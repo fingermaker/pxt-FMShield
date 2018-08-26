@@ -130,7 +130,7 @@ namespace FMShield {
         * @param t 在此处描述参数, 
         * @param p 在此处描述参数
         */
-    //% weight=25
+    //% weight=15
     //% blockId=motor_ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
     
 
@@ -156,7 +156,7 @@ namespace FMShield {
     * @param t 在此处描述参数, 
     * @param p 在此处描述参数
     */
-    //% weight=25
+    //% weight=14
     //% blockId=motor_ev3ColorSensor block="Ev3 color|%m|mode|%mode"
 
 
