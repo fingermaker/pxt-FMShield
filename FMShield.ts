@@ -228,7 +228,7 @@ namespace FMShield {
     //% weight=50
     //% blockId=motor_setMotor block="Set motor|%m|type|%t|Power|%p"
     //% shim=FMShield::setMotor
-    function setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
+    export function setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
         // Add code here
        
     }
@@ -244,7 +244,7 @@ namespace FMShield {
     //% weight=48
     //% blockId=motor_setMotorInversion block="Set motor inversion|%m"
     //% shim=FMShield::setMotorInversion
-    function setMotorInversion(m: FMMotorSN): void {
+    export function setMotorInversion(m: FMMotorSN): void {
         
     }
 
@@ -258,7 +258,7 @@ namespace FMShield {
     //% blockId=motor_motorRun block="Motor run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRun
-    function motorRun(m: FMMotorSN, speed: number): void {
+    export function motorRun(m: FMMotorSN, speed: number): void {
         // Add code here
     }
 
@@ -272,7 +272,7 @@ namespace FMShield {
     //% blockId=motor_motorFineRun block="Motor fine run|%m|speed|%speed"
     //% speed.min=-2000 speed.max=2000
     //% shim=FMShield::motorFineRun
-    function motorFineRun(m: FMMotorSN, speed: number): void {
+    export function motorFineRun(m: FMMotorSN, speed: number): void {
         // Add code here
     }
 
