@@ -14,7 +14,8 @@
         "FMShield.cpp",
         "FMShield.ts",
         "shims.d.ts",
-        "enums.d.ts"
+        "enums.d.ts",
+        "_local/zh/FMShield-strings.json"
     ],
     "testFiles": [
         "test.ts"
