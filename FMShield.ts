@@ -235,7 +235,7 @@ namespace FMShield {
          */
     //% weight=30
     //% blockGap=8
-    //% blockId=motor_motorRun block="电机|%m|speed|%speed"
+    //% blockId=motor_motorRun block="Motor run|%m|speed|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRun
     export function motor_motorRun(m: FMMotorSN, speed: number): void {
