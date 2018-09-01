@@ -1,6 +1,6 @@
 {
 	
-    "FMShield.motor_motorRun|block": "电机|%m|速度 %speed",
-    "FMShield.motorRun|block": "电机|%m|速度 %speed"
+    "FMShield.motor_motorRun|block": "电   机|%m|速度 %speed",
+    "FMShield.motorRun|block": "电 机|%m|速度 %speed"
 	
 }
