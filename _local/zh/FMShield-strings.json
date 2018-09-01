@@ -1,6 +1,6 @@
 {
 	"FMShield.motor_setMotor|block": "设置电机|%m|类型|%t|电源|%p",
     "FMShield.setMotor|block": "设置电机|%m|类型|%t|电源|%p",
-    "FMShield.motorRun|block": "电机 运行|%m|速 度|%speed"
+    "FMShield.motorRun|block": "电机运行|%m|速度|%speed"
 	
 }
