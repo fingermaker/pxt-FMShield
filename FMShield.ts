@@ -44,7 +44,7 @@ enum NxtLightSensorMode {
     //% block=反射光
     Reflected = 0,
     //% block=环境光
-    Ambient = 1,
+    Ambient = 1
     
 }
 
@@ -207,7 +207,7 @@ namespace FMShield {
     //% blockGap=8
     //% blockId=motor_setMotor block="设置电机|%m|类型|%t|电源|%p"
     //% shim=FMShield::setMotor
-    export function motor_setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
+    export function motor_setMotor(m: FMMotorSN, t: FMMotorType=1, p: FMPowerType): void {
         // Add code here
         return;
     }
