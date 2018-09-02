@@ -56,9 +56,9 @@ enum Ev3ColorSensorMode {
     //% block=颜色
     COL_COLOR = 2,
     //% block=反射光原始值
-    REF_RAW = 3,
+    COL_REF_RAW = 3,
     //% block=RGB原始值
-    RGB_RAW = 4,
+    COL_RGB_RAW = 4,
     //% block=校准
     COL_CAL = 5
 }
@@ -70,7 +70,7 @@ enum Ev3GyroSensorMode {
     Rate = 1,
     //% block=快速
     Fast = 2,
-    //% block =校准
+    //% block=校准
     Calibration = 4
 }
 
@@ -157,7 +157,7 @@ namespace FMShield {
         * @param m 在此处描述参数,
         * @param t 在此处描述参数, 
         * @param p 在此处描述参数
-        */
+        */ 
     //% weight=15
     //% blockGap=8
     //% blockId=sensor_ev3UltrasonicSensor block="Ev3 超声波|%s|模式|%mode"
@@ -200,7 +200,7 @@ namespace FMShield {
     /**
      * TODO: 在此处描述您的函数
      * @param m 在此处描述参数,
-     * @param t 在此处描述参数; eg:1
+     * @param t ; eg:1
      * @param p 在此处描述参数
      */
     //% weight=50
