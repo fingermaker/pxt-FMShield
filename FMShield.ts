@@ -57,7 +57,7 @@ enum Ev3ColorSensorMode {
     COL_COLOR = 2,
     //% block= 反射光原始值
     REF_RAW = 3,
-    //% block=RGB原始值
+    //% block= RGB原始值
     RGB_RAW = 4,
     //% block=校准
     COL_CAL = 5
@@ -65,13 +65,13 @@ enum Ev3ColorSensorMode {
 
 enum Ev3GyroSensorMode {
     //% block=角度
-    Angle = ,
+    Angle = 0,
     //% block=角速度
     Rate = 1,
     //% block=快速
-    Fast = 2，
+    Fast = 2,
     //% block = 校准
-    Calibration = 3
+    Calibration = 4
 }
 
 enum FMSensor {
