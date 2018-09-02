@@ -200,7 +200,7 @@ namespace FMShield {
     /**
      * TODO: 在此处描述您的函数
      * @param m 在此处描述参数,
-     * @param t motor type; eg:1
+     * @param t motor type; eg: 1
      * @param p 在此处描述参数
      */
     //% weight=50
