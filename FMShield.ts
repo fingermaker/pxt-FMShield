@@ -200,14 +200,14 @@ namespace FMShield {
     /**
      * TODO: 在此处描述您的函数
      * @param m 在此处描述参数,
-     * @param t 在此处描述参数, 
+     * @param t 在此处描述参数; eg:1
      * @param p 在此处描述参数
      */
     //% weight=50
     //% blockGap=8
     //% blockId=motor_setMotor block="设置电机|%m|类型|%t|电源|%p"
     //% shim=FMShield::setMotor
-    export function motor_setMotor(m: FMMotorSN, t: FMMotorType=1, p: FMPowerType): void {
+    export function motor_setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
         // Add code here
         return;
     }
