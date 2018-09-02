@@ -32,45 +32,46 @@ enum NxtSensor {
 }
 
 enum Ev3UltrasonicSensorMode {
-    //% block=
+    //% block=厘米
     Centimeters = 0,
-    //% block=Inches
+    //% block=英寸
     Inches = 1,
-    //% block=
+    //% block=监听
     Listen = 2
 }
 
 enum NxtLightSensorMode {
-    //% block=
-    Centimeters = 0,
-    //% block=Inches
-    Inches = 1,
-    //% block=
-    Listen = 2
+    //% block=反射光
+    Reflected = 0,
+    //% block=环境光
+    Ambient = 1,
+    
 }
 
 enum Ev3ColorSensorMode {
-    //% block=COL_REFLECT
+    //% block=反射光
     COL_REFLECT = 0,
-    //% block=COL_AMBIENT
+    //% block=环境光
     COL_AMBIENT = 1,
-    //% block=COL_COLOR
+    //% block=颜色
     COL_COLOR = 2,
-    //% block= REF_RAW
+    //% block= 反射光原始值
     REF_RAW = 3,
-    //% block=RGB_RAW
+    //% block=RGB原始值
     RGB_RAW = 4,
-    //% block=COL_CAL
+    //% block=校准
     COL_CAL = 5
 }
 
 enum Ev3GyroSensorMode {
-    //% block=Angle
-    Angle = 0,
-    //% block=Inches
+    //% block=角度
+    Angle = ,
+    //% block=角速度
     Rate = 1,
-    //% block=Fast
-    Fast = 2
+    //% block=快速
+    Fast = 2，
+    //% block = 校准
+    Calibration = 3
 }
 
 enum FMSensor {
@@ -98,9 +99,9 @@ enum FMMotorType {
 }
 enum FMPowerType {
 
-    //% block=POWER_9V
+    //% block=9V
     POWER_9V = 0,
-    //% block=POWER_12V
+    //% block=12V
     POWER_12V = 1
 }
 enum FMMotorSN {
