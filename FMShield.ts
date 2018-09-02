@@ -142,7 +142,7 @@ namespace FMShield {
         */
     //% weight=16
     //% blockGap=8
-    //% blockId=sensor_nxtLightSensor block="nxt light|%s"
+    //% blockId=sensor_nxtLightSensor block="Nxt 光电|%s"
     //% shim=FMShield::nxtLightSensor
 
 
@@ -159,7 +159,7 @@ namespace FMShield {
         */
     //% weight=15
     //% blockGap=8
-    //% blockId=sensor_ev3UltrasonicSensor block="Ev3 Ultrasonic|%s|mode|%mode"
+    //% blockId=sensor_ev3UltrasonicSensor block="Ev3 超声波|%s|模式|%mode"
     //% shim=FMShield::ev3UartSensor
 
 
@@ -174,7 +174,7 @@ namespace FMShield {
     */
     //% weight=14
     //% blockGap=8
-    //% blockId=sensor_ev3ColorSensor block="Ev3 color|%m|mode|%mode"
+    //% blockId=sensor_ev3ColorSensor block="Ev3 颜色|%m|模式|%mode"
     //% shim=FMShield::ev3UartSensor
 
     export function sensor_ev3ColorSensor(m: Ev3Sensor, mode: Ev3ColorSensorMode): number {
@@ -189,7 +189,7 @@ namespace FMShield {
     */
     //% weight=13
     //% blockGap=8
-    //% blockId=sensor_ev3GyroSensor block="Ev3 gyro|%m|mode|%mode"
+    //% blockId=sensor_ev3GyroSensor block="Ev3 陀螺仪|%m|模式|%mode"
     //% shim=FMShield::ev3UartSensor
 
     export function sensor_ev3GyroSensor(m: Ev3Sensor, mode: Ev3GyroSensorMode): number {
@@ -221,7 +221,7 @@ namespace FMShield {
      */
     //% weight=48
     //% blockGap=8
-    //% blockId=motor_setMotorInversion block="Set motor inversion|%m"
+    //% blockId=motor_setMotorInversion block="设置电机反转|%m"
     //% shim=FMShield::setMotorInversion
     export function motor_setMotorInversion(m: FMMotorSN): void {
         return;
@@ -235,7 +235,7 @@ namespace FMShield {
          */
     //% weight=30
     //% blockGap=8
-    //% blockId=motor_motorRun block="Motor run|%m|speed|%speed"
+    //% blockId=motor_motorRun block="电机运行|%m|速度|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRun
     export function motor_motorRun(m: FMMotorSN, speed: number): void {
@@ -251,7 +251,7 @@ namespace FMShield {
      */
     //% weight=29
     //% blockGap=8
-    //% blockId=motor_motorFineRun block="Motor fine run|%m|speed|%speed"
+    //% blockId=motor_motorFineRun block="电机高精度运行|%m|速度d|%speed"
     //% speed.min=-2000 speed.max=2000
     //% shim=FMShield::motorFineRun
     export function motor_motorFineRun(m: FMMotorSN, speed: number): void {
@@ -267,7 +267,7 @@ namespace FMShield {
      */
     //% weight=28
     //% blockGap=8
-    //% blockId=motor_motorConstantRun block="Motor Constant run|%m|speed|%speed"
+    //% blockId=motor_motorConstantRun block="电机恒速运行|%m|速度|%speed"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorConstantRun
     export function motor_motorConstantRun(m: FMMotorSN, speed: number): void {
@@ -281,7 +281,7 @@ namespace FMShield {
      */
     //% weight=27
     //% blockGap=8
-    //% blockId=motor_motorRunPosition block="Motor run|%m|speed|%speed|position|%position"
+    //% blockId=motor_motorRunPosition block="电机运行|%m|速度|%speed|码盘数|%position"
     //% speed.min=-100 speed.max=100
     //% shim=FMShield::motorRunPosition
     export function motor_motorRunPosition(m: FMMotorSN, speed: number, position: number): void {
@@ -295,7 +295,7 @@ namespace FMShield {
      */
     //% weight=25
     //% blockGap=8
-    //% blockId=motor_motorReadPosition block="Motor read position|%m"
+    //% blockId=motor_motorReadPosition block="读取电机码盘数|%m"
     //% shim=FMShield::motorReadPosition
     export function motor_motorReadPosition(m: FMMotorSN): number {
        
