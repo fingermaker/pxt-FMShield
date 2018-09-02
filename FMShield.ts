@@ -71,7 +71,7 @@ enum Ev3GyroSensorMode {
     //% block=快速
     Fast = 2,
     //% block = 校准
-    Calibration = 3
+    Calibration = 4
 }
 
 enum FMSensor {
