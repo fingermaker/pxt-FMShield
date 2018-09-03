@@ -143,7 +143,7 @@ namespace FMShield {
         */
     //% weight=16
     //% blockGap=8
-    //% blockId=sensor_nxtLightSensor block="Nxt 光电|%s"
+    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s"
     //% shim=FMShield::nxtLightSensor
 
 
@@ -160,7 +160,7 @@ namespace FMShield {
         */ 
     //% weight=15
     //% blockGap=8
-    //% blockId=sensor_ev3UltrasonicSensor block="Ev3 超声波|%s|模式|%mode"
+    //% blockId=sensor_ev3UltrasonicSensor block="EV3 超声波|%s|模式|%mode"
     //% shim=FMShield::ev3UartSensor
 
 
@@ -175,7 +175,7 @@ namespace FMShield {
     */
     //% weight=14
     //% blockGap=8
-    //% blockId=sensor_ev3ColorSensor block="Ev3 颜色|%m|模式|%mode"
+    //% blockId=sensor_ev3ColorSensor block="EV3 颜色|%m|模式|%mode"
     //% shim=FMShield::ev3UartSensor
 
     export function sensor_ev3ColorSensor(m: Ev3Sensor, mode: Ev3ColorSensorMode): number {
@@ -190,7 +190,7 @@ namespace FMShield {
     */
     //% weight=13
     //% blockGap=8
-    //% blockId=sensor_ev3GyroSensor block="Ev3 陀螺仪|%m|模式|%mode"
+    //% blockId=sensor_ev3GyroSensor block="EV3 陀螺仪|%m|模式|%mode"
     //% shim=FMShield::ev3UartSensor
 
     export function sensor_ev3GyroSensor(m: Ev3Sensor, mode: Ev3GyroSensorMode): number {
@@ -252,7 +252,7 @@ namespace FMShield {
      */
     //% weight=29
     //% blockGap=8
-    //% blockId=motor_motorFineRun block="电机高精度运行|%m|速度d|%speed"
+    //% blockId=motor_motorFineRun block="电机高精度运行|%m|速度|%speed"
     //% speed.min=-2000 speed.max=2000
     //% shim=FMShield::motorFineRun
     export function motor_motorFineRun(m: FMMotorSN, speed: number): void {
