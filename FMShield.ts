@@ -280,6 +280,21 @@ namespace FMShield {
      * @param t 在此处描述参数, 
      * @param p 在此处描述参数
      */
+    //% weight=26
+    //% blockGap=8
+    //% blockId=motor_motorGoToPosition block="电机运行到|%m|速度|%speed|码盘数|%position"
+    //% speed.min=-100 speed.max=100
+    //% shim=FMShield::motorGoToPosition
+    export function motor_motorGoToPosition(m: FMMotorSN, speed: number, position: number): void {
+        return;
+    }
+
+/**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
     //% weight=27
     //% blockGap=8
     //% blockId=motor_motorRunPosition block="电机运行|%m|速度|%speed|码盘数|%position"
@@ -288,6 +303,7 @@ namespace FMShield {
     export function motor_motorRunPosition(m: FMMotorSN, speed: number, position: number): void {
         return;
     }
+
     /**
      * TODO: 在此处描述您的函数
      * @param m 在此处描述参数,

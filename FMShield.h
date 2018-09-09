@@ -105,6 +105,7 @@ extern s sendCmd;
     void motorFineRun(uint8_t m, int speed);
     void motorConstantRun(uint8_t m, int speed);
     void motorRunPosition(uint8_t m, int speed, long position);
+    void motorGoToPosition(uint8_t m, int speed, long position);
     long motorReadPosition(uint8_t m);
     //};
 #endif // #ifndef FMSHIELD_H
