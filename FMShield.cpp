@@ -222,7 +222,7 @@ void motorRunPosition(uint8_t m, int speed, long position)
     sendCmdRevInf(128);
 }
 //%
-void motorGoToPosition(int speed, int32_t position)
+void motorGoToPosition(uint8_t m, int speed, int32_t position)
 {
     uint8_t startN = 28; //let startN: number = 28; //8byte
     setMotorMode(m, MOTOR_PID_POSITION);
