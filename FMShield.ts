@@ -136,6 +136,114 @@ namespace FMShield {
     
     
     
+
+    /**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t motor type; eg: FMMotorType.LEGO
+     * @param p 在此处描述参数
+     */
+    //% weight=50
+    //% blockGap=8
+    //% blockId=motor_setMotor block="设置电机|%m|类型|%t|电源|%p"
+    //% shim=FMShield::setMotor
+    export function motor_setMotor(m: FMMotorSN, t: FMMotorType, p: FMPowerType): void {
+        // Add code here
+        
+    }
+
+    
+
+    /**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
+    //% weight=48
+    //% blockGap=8
+    //% blockId=motor_setMotorInversion block="设置电机反转|%m"
+    //% shim=FMShield::setMotorInversion
+    export function motor_setMotorInversion(m: FMMotorSN): void {
+        
+    }
+
+    /**
+         * TODO: 在此处描述您的函数
+         * @param m 在此处描述参数,
+         * @param t 在此处描述参数, 
+         * @param p 在此处描述参数
+         */
+    //% weight=30
+    //% blockGap=8
+    //% blockId=motor_motorRun block="电机运行|%m|速度|%speed"
+    //% speed.min=-100 speed.max=100
+    //% shim=FMShield::motorRun
+    export function motor_motorRun(m: FMMotorSN, speed: number): void {
+        // Add code here
+        
+    }
+
+    /**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
+    //% weight=29
+    //% blockGap=8
+    //% blockId=motor_motorFineRun block="电机高精度运行|%m|速度|%speed"
+    //% speed.min=-2000 speed.max=2000
+    //% shim=FMShield::motorFineRun
+    export function motor_motorFineRun(m: FMMotorSN, speed: number): void {
+        // Add code here
+        
+    }
+
+    /**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
+    //% weight=28
+    //% blockGap=8
+    //% blockId=motor_motorConstantRun block="电机恒速运行|%m|速度|%speed"
+    //% speed.min=-100 speed.max=100
+    //% shim=FMShield::motorConstantRun
+    export function motor_motorConstantRun(m: FMMotorSN, speed: number): void {
+        
+    }
+    /**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
+    //% weight=26
+    //% blockGap=8
+    //% blockId=motor_motorGoToPosition block="电机运行到|%m|速度|%speed|码盘数|%position"
+    //% speed.min=-100 speed.max=100
+    //% shim=FMShield::motorGoToPosition
+    export function motor_motorGoToPosition(m: FMMotorSN, speed: number, position: number): void {
+        
+    }
+
+/**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
+    //% weight=27
+    //% blockGap=8
+    //% blockId=motor_motorRunPosition block="电机运行|%m|速度|%speed|码盘数|%position"
+    //% speed.min=-100 speed.max=100
+    //% shim=FMShield::motorRunPosition
+    export function motor_motorRunPosition(m: FMMotorSN, speed: number, position: number): void {
+        
+    }
+
     
 }
 
