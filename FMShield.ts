@@ -137,7 +137,19 @@ namespace FMShield {
     
     
     
-    
+    /**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
+    //% weight=16
+    //% blockGap=8
+    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s" shim=FMShield::nxtLightSensor
+    function nxtLightSensor(s: uint8): any{
+        return;
+
+    }
    
 
     /**
