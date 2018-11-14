@@ -135,67 +135,9 @@ enum FMMotorMode {
 namespace FMShield {
     
     
-    /**
-        * TODO: 在此处描述您的函数
-        * @param m 在此处描述参数,
-        * @param t 在此处描述参数, 
-        * @param p 在此处描述参数
-        */
-    //% weight=16
-    //% blockGap=8
-    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s"
-    //% shim=FMShield::nxtLightSensor
+    
 
-
-    export function sensor_nxtLightSensor(s: NxtSensor): number {
-        return;
-    }
-
-
-    /**
-        * TODO: 在此处描述您的函数
-        * @param m 在此处描述参数,
-        * @param t 在此处描述参数, 
-        * @param p 在此处描述参数
-        */ 
-    //% weight=15
-    //% blockGap=8
-    //% blockId=sensor_ev3UltrasonicSensor block="EV3 超声波|%s|模式|%mode"
-    //% shim=FMShield::ev3UartSensor
-
-
-    export function sensor_ev3UltrasonicSensor(s: Ev3Sensor, mode: Ev3UltrasonicSensorMode): number {
-        return;
-    }
-    /**
-    * TODO: 在此处描述您的函数
-    * @param m 在此处描述参数,
-    * @param t 在此处描述参数, 
-    * @param p 在此处描述参数
-    */
-    //% weight=14
-    //% blockGap=8
-    //% blockId=sensor_ev3ColorSensor block="EV3 颜色|%m|模式|%mode"
-    //% shim=FMShield::ev3UartSensor
-
-    export function sensor_ev3ColorSensor(m: Ev3Sensor, mode: Ev3ColorSensorMode): number {
-        return;
-    }
-
-    /**
-    * TODO: 在此处描述您的函数
-    * @param m 在此处描述参数,
-    * @param t 在此处描述参数, 
-    * @param p 在此处描述参数
-    */
-    //% weight=13
-    //% blockGap=8
-    //% blockId=sensor_ev3GyroSensor block="EV3 陀螺仪|%m|模式|%mode"
-    //% shim=FMShield::ev3UartSensor
-
-    export function sensor_ev3GyroSensor(m: Ev3Sensor, mode: Ev3GyroSensorMode): number {
-        return;
-    }
+    
 
     /**
      * TODO: 在此处描述您的函数
@@ -304,19 +246,6 @@ namespace FMShield {
         return;
     }
 
-    /**
-     * TODO: 在此处描述您的函数
-     * @param m 在此处描述参数,
-     * @param t 在此处描述参数, 
-     * @param p 在此处描述参数
-     */
-    //% weight=25
-    //% blockGap=8
-    //% blockId=motor_motorReadPosition block="读取电机码盘数|%m"
-    //% shim=FMShield::motorReadPosition
-    export function motor_motorReadPosition(m: FMMotorSN): number {
-       
-        return ;
-    }
+    
 }
 

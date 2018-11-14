@@ -29,7 +29,16 @@ void sendCmdRevInf(uint8_t size)
     NSS = 1;
 }
 
-//%
+/**
+    * TODO: 在此处描述您的函数
+    * @param m 在此处描述参数,
+    * @param t 在此处描述参数, 
+    * @param p 在此处描述参数
+    */
+    //% weight=13
+    //% blockGap=8
+    //% blockId=sensor_ev3GyroSensor block="EV3 陀螺仪|%m|模式|%mode"
+    //% shim=FMShield::ev3UartSensor
 int ev3UartSensor(uint8_t s, uint8_t mode)
 {
     // Add code here
@@ -63,7 +72,16 @@ int ev3UartSensor(uint8_t s, uint8_t mode)
 
     return int(mm);
 }
-//%
+/**
+        * TODO: 在此处描述您的函数
+        * @param m 在此处描述参数,
+        * @param t 在此处描述参数, 
+        * @param p 在此处描述参数
+        */
+    //% weight=16
+    //% blockGap=8
+    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s"
+    //% shim=FMShield::nxtLightSensor
 int nxtLightSensor(uint8_t s)
 {
     // Add code here
@@ -184,9 +202,17 @@ void motorConstantRun(uint8_t m, int speed)
     sendCmd.cSend[startN + 1 + m * 16] = speed >> 8;
     sendCmdRevInf(128);
 }
-
-//%
-long motorReadPosition(uint8_t m)
+/**
+     * TODO: 在此处描述您的函数
+     * @param m 在此处描述参数,
+     * @param t 在此处描述参数, 
+     * @param p 在此处描述参数
+     */
+    //% weight=25
+    //% blockGap=8
+    //% blockId=motor_motorReadPosition block="读取电机码盘数|%m"
+    //% shim=FMShield::motorReadPosition
+int32_t motorReadPosition(uint8_t m)
 {
     // Add code here
     uint8_t startN = 76; //let startN: number = 76; //8byte
