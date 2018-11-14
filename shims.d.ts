@@ -25,8 +25,7 @@ declare namespace FMShield {
      */
     //% weight=16
     //% blockGap=8
-    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s"
-    //% shim=FMShield::nxtLightSensor shim=FMShield::nxtLightSensor
+    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s" shim=FMShield::nxtLightSensor
     function nxtLightSensor(s: uint8): int32;
 
     /**
@@ -37,8 +36,7 @@ declare namespace FMShield {
      */
     //% weight=25
     //% blockGap=8
-    //% blockId=motor_motorReadPosition block="读取电机码盘数|%m"
-    //% shim=FMShield::motorReadPosition shim=FMShield::motorReadPosition
+    //% blockId=motor_motorReadPosition block="读取电机码盘数|%m" shim=FMShield::motorReadPosition
     function motorReadPosition(m: uint8): int32;
 }
 
