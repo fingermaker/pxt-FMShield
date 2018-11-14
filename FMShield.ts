@@ -145,7 +145,7 @@ namespace FMShield {
      */
     //% weight=16
     //% blockGap=8
-    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s" shim=FMShield::nxtLightSensor
+    //% blockId=sensor_nxtLightSensor block="NXT 光电|%s"
     export function nxtLightSensor(s: uint8): any{
         return;
 
