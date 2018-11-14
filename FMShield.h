@@ -96,7 +96,7 @@ extern s sendCmd;
 //{
     //public:
     void sendCmdRevInf(uint8_t size);
-    int nxtLightSensor(uint8_t s);
+    //int nxtLightSensor(uint8_t s);
     int ev3UartSensor(uint8_t s,uint8_t mode);
     void setMotor(uint8_t m, uint8_t t, uint8_t p);
     void setMotorMode(uint8_t m, uint8_t mode);
