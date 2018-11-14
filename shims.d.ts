@@ -17,8 +17,6 @@ declare namespace FMShield {
     //% shim=FMShield::ev3UartSensor shim=FMShield::ev3UartSensor
     function ev3UartSensor(s: uint8, mode: uint8): int32;
 
-    
-
     /**
      * TODO: 在此处描述您的函数
      * @param m 在此处描述参数,
