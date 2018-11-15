@@ -83,7 +83,7 @@ int ev3UartSensor(uint8_t s, uint8_t mode)
 //% blockGap=8
 //% blockId=sensor_nxtLightSensor block="NXT 光电|%s"
 
-int nxtLightSensor(uint8_t s)
+int nxtLightSensor(int8_t s)
 {
     // Add code here
     //uint8_t startN = 4; //8byte
