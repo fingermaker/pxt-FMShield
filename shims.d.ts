@@ -25,7 +25,7 @@ declare namespace FMShield {
     //% weight=16
     //% blockGap=8
     //% blockId=sensor_nxtLightSensor block="NXT 光电|%s" shim=FMShield::nxtLightSensor
-    function nxtLightSensor(s: uint8): int32;
+    function nxtLightSensor(s: int8): int32;
 
     /**
      * TODO: 在此处描述您的函数
